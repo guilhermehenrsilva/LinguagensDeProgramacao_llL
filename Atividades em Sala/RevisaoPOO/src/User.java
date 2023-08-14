@@ -36,4 +36,7 @@ public class User {
 		}*/
 		this.cpf = cpf;
 	}
+	public String  toString() {
+		return this.nome;
+	}
 }
