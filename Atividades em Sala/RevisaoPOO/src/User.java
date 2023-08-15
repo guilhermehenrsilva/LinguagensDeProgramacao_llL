@@ -1,23 +1,14 @@
-import java.util.ArrayList;
-import java.util.List;
-
-public class User {
-	private String nome;//escopo global
-	private String cpf;
-	private List<String> friends;
+public abstract class User {
+	private int id;
+	private String nome;
+	private String birthDate;
 	
-	public User() {
-		friends = new ArrayList<>();
-		friends.add("Luiza");
-		friends.add("Rosana");
-		friends.add("Noé");
-	}
 	
-	public void setFriends(List<String> friends) {
-		this.friends = friends;
+	protected  User (int id) {
+		this.id = id;
 	}
-	public List<String> getFriends(){
-		return this.friends;
+	public int getId() {
+		return id;
 	}
 	public String getNome() {
 		return nome;
@@ -25,18 +16,18 @@ public class User {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getCpf() {
-		return cpf;
+	public String getBirthDate() {
+		return birthDate;
 	}
-	public void setCpf(String cpf) { // escopo local
-		/*if (cpf == null || cpf.equals("")) {
-			return;
-		}else {
-			cpf = cpf;
-		}*/
-		this.cpf = cpf;
+	public void setBirthDate(String birthDate) {
+		this.birthDate = birthDate;
 	}
-	public String  toString() {
-		return this.nome;
+	
+	public String  formatPersonalData() {
+		
+		return String.format("ID: %d\nNome: %s", this.id , this.nome);
+		//return "ID: " + this.id + "Nome: " + this.nome;
 	}
+
+	
 }
