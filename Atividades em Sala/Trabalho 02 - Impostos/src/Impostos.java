@@ -1,20 +1,26 @@
 
-public class Impostos {
-	private String nome;
-	private double taxa;
-	
-	public void Imposto(String nome, double taxa) {
-		this.nome = nome;
-		this.taxa = taxa;
+	public class Impostos {
+		
+		private String nome;
+		private double porcentagem;
+		
+		public Impostos(String nome, double porcentagem) {
+			this.nome = nome;
+			this.porcentagem = porcentagem;
+		}
+
+		public double getPorcentagem() {
+			return porcentagem;
+		}
+
+		public void setPorcentagem(double porcentagem) {
+			this.porcentagem = porcentagem;
+		}
+
+		public String getNome() {
+			return nome;
+		}
+		
+		
 	}
-	
-	
-	public double calcularImposto(double valorBase) {
-		return  valorBase * taxa / 100;
-	}
-	
-	public String getNome() {
-		return nome;
-	}
-}
 
