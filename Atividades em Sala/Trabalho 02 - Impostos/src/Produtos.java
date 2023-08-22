@@ -25,7 +25,7 @@ public class Produtos {
     public double calcularPrecoVenda() {
         double precoImpostos = impostos.stream()
                 .mapToDouble(imposto -> precoCusto * imposto.getPorcentagem())
-                .sum();
+                .sum(); // 
 
         double precoMargem = precoCusto + precoImpostos;
         double precoFinal = precoMargem + (precoMargem * margemLucro);
@@ -45,7 +45,6 @@ public class Produtos {
         System.out.println(nome);
         System.out.printf("Preco de custo: R$%.2f%n", precoCusto);
         System.out.println("Impostos: " + imprimirImpostos());
-        System.out.println("Margem de Lucro: " + margemLucro);
         System.out.printf("Preco de venda: R$%.2f%n%n", precoVenda);
     }
 }

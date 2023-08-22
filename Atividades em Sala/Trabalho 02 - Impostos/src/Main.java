@@ -19,42 +19,44 @@ public class Main {
         arroz.insereImposto(icms);
         arroz.insereImposto(confins);
         arroz.insereImposto(iss);
+        prod.add(arroz);
         
         Produtos feijao = new Produtos("Feijão", 7.00, 0.25);
         feijao.insereImposto(icms);
         feijao.insereImposto(confins);
         feijao.insereImposto(iss);
+        prod.add(feijao);
         
         Produtos carne = new Produtos("Carne", 7.00, 0.35);
         carne.insereImposto(confins);
         carne.insereImposto(icms);
         carne.insereImposto(ipi);
+        prod.add(carne);
         
         Produtos cerveja = new Produtos("Cerveja", 7.00, 0.30);
         cerveja.insereImposto(confins);
         cerveja.insereImposto(icms);
         cerveja.insereImposto(iss);
         cerveja.insereImposto(ipi);
+        prod.add(cerveja);
         
         Produtos gas = new Produtos("Gás", 7.00, 0.15);
         gas.insereImposto(confins);
         gas.insereImposto(icms);
         gas.insereImposto(ipi);
+        prod.add(gas);
         
         Produtos gasolina = new Produtos("Gasolina", 7.00, 0.15);
         gasolina.insereImposto(confins);
         gasolina.insereImposto(icms);
         gasolina.insereImposto(cide);
+        prod.add(gasolina);    
         
-        prod.add(arroz);
-        prod.add(feijao);
-        prod.add(carne);
-        prod.add(cerveja);
-        prod.add(gas);
-        prod.add(gasolina);
+      
         
         for(Produtos produto : prod) {
         	double precoVenda = produto.calcularPrecoVenda();
+        	System.out.println(precoVenda);
         	produto.imprimeDadosProduto(precoVenda);
         }
 	}
