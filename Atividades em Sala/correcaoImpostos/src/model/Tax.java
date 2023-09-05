@@ -24,12 +24,13 @@ public class Tax {
 		//Cast(Tax)obj
 		Tax tax = (Tax)obj;
 		
-		return this.abbr.equals(tax.Abbr);
+		return this.abbr.equals(tax.abbr);
 	}
 
 	public double calculate() {
 		// TODO implementar cálculo do imposto	
-			return 0;
+			
+		return 0;
 	}
 	
 	public void setAliquot(double aliquot) {
