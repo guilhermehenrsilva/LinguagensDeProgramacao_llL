@@ -23,8 +23,7 @@ public class Produtos {
     }
 
     public double calcularPrecoVenda() {
-        double precoImpostos = impostos.stream()
-                .mapToDouble(imposto -> precoCusto * imposto.getPorcentagem())
+        double precoImpostos = impostos.stream().mapToDouble(imposto -> precoCusto * imposto.getPorcentagem())
                 .sum(); // 
 
         double precoMargem = precoCusto + precoImpostos;

@@ -34,9 +34,9 @@ public class Product {
 		//somar ao preço de custo
 		//calcular o valor final
 	}
-	public double getCostPrice() {
-		
-	}
+	
+	
+	
 	private void setCostPrice (double costPrice) throws Exception {
 		if (costPrice <= 0) throw new Exception("Preço de custo está invalido.");
 		this.costPrice = costPrice;

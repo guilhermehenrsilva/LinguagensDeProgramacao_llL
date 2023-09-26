@@ -6,6 +6,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Tax IPI = new Tax ("IPI", "Imposto Prod. Industrializado",8);
 		Tax IPI2 = new Tax ("IPI", "Imposto Prod. Industrializado",8);
+		System.out.println();
 		}
 
 }
