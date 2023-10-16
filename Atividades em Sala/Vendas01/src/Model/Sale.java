@@ -21,8 +21,8 @@ public class Sale {
 	public List<SaleItem> getSaleItens(){
 		return this.itens;
 	}
-	public void addSalesItens(SaleItem item) {
-		this.itens.add(item);
+	public void addSales(int productCode, int amount) {
+		SaleItem item = new SaleItem (productCode, amount());
 	}
 	public double getTotal() {
 		double total = 0;

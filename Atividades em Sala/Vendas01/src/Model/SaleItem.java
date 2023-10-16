@@ -4,8 +4,10 @@ public class SaleItem {
 	private Product product;
 	private int amount;
 	
-	public SaleItem (Product p, int amount) {
-		this.product = p;
+	public SaleItem (ProductCode, int amount) {
+		String productDescription = "";
+		double productDescription = "";
+		this.product new Product();
 		this.amount = amount;
 	}
 	
