@@ -1,6 +1,6 @@
 package view;
 
-import model.CartaoCredito;
+import model.Credit;
 import model.Payment;
 import model.Sale;
 
@@ -11,6 +11,10 @@ public class Main {
 		sale.addItem("arroz", 3);
 		sale.addItem("feijao", 2);
 		sale.addItem("sal", 1);
+		// CC - Credito
+		// Cd - Débito
+		// C - Dinheiro/pix
+		sale.addPayment("cd");
 		
 		System.out.println(String.format("Venda - #1234 - %s", 
 				sale.getDate().toLocaleString()));
@@ -21,7 +25,8 @@ public class Main {
 		
 		System.out.println(String.format("Total: R$:%.2f", sale.getTotal()));
 		
-		System.out.println("Escolha sua forma de pagamento:");
+		System.out.println("Forma de pagamento: " + sale.getPayment());
+		System.out.println("Valor a ser pago: "+ sale.paymentValue());
 		
 		
 		

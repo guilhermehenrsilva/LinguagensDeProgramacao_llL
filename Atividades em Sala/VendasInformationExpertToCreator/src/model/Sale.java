@@ -8,6 +8,7 @@ import java.util.List;
 public class Sale {
 	private Date date;
 	private List<SaleItem> items;
+	private Payment payment;
 	
 	public Sale() {
 		this.date = Calendar.getInstance().getTime();
@@ -47,4 +48,16 @@ public class Sale {
 		
 		return total;
 	}
+	public void addPayment(String payment) {
+		this.payment = DataBase.getPayment(payment);
+	}
+	
+	public String getPayment () {
+		return this.payment.description();
+	}
+	
+	public double paymentValue() {
+		return this.payment.value(getTotal());
+	}
+	
 }
