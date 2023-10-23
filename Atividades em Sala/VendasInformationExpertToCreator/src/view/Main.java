@@ -3,6 +3,7 @@ package view;
 import model.Credit;
 import model.Payment;
 import model.Sale;
+import model.Stock;
 
 public class Main {
 
@@ -27,7 +28,8 @@ public class Main {
 		
 		System.out.println("Forma de pagamento: " + sale.getPayment());
 		System.out.println("Valor a ser pago: "+ sale.paymentValue());
-		
+		 
+		System.out.println(Stock.class);
 		
 		
 		

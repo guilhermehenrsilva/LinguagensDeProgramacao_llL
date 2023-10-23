@@ -20,6 +20,8 @@ public class DataBase {
 		payments.put("cd",new Debit(0));
 		payments.put("c" , new Cash(5));
 		
+		
+		
 	}
 	
 	public static String[] getProductDescription(String key) {
